@@ -1,48 +1,55 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract TreasureChest {
+contract AdminOnly{
     address public owner;
-    uint256 public totalTreasure;
+    uint64 public totalTreasure;
+    uint64 public allowance;
+    mapping(address => bool) public isAllowed;
+    mapping (address => bool) public hasWithdrawn;
 
-    mapping(address => uint256) public allowance;
-    mapping(address => bool) public hasWithdrawn;
-
-    constructor() {
-        owner = msg.sender;
+    constructor(){
+        owner=msg.sender;
     }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "You are not the owner!");
-        _;
+    modifier onlyOwner(){
+         require(owner == msg.sender, "only for owner!");
+         _;
     }
+    function addTreasure(uint64 _amount , uint64 _allow)public  onlyOwner{
+            totalTreasure += _amount;
+            allowance = _allow;
 
-    function addTreasure(uint256 _amount) public onlyOwner {
-        require(_amount > 0 , "amount must be greater than 0");
-        totalTreasure += _amount;
     }
-
-    function approveFriend(address _friend, uint256 _amount) public onlyOwner {
-        allowance[_friend] = _amount;
-    }
-
+     function approveUser(address _addr) public onlyOwner{
+        isAllowed[_addr]=true;
+     }
     function withdraw() public {
-        uint256 amount = allowance[msg.sender];
-        
-        require(amount > 0, "No treasure for you");
-        require(!hasWithdrawn[msg.sender], "Already took your share");
-        require(totalTreasure >= amount, "bank is empty!");
+        require(msg.sender ==owner || isAllowed[msg.sender], "not allowed to withdraw");
+        require(totalTreasure > 0, "we finished our treasure!");
+        if(msg.sender ==owner){
+            totalTreasure = 0;
+        }else{
+            require(!hasWithdrawn[msg.sender] , "u already withdrawed!");
+            require(totalTreasure > allowance, "not enough treasure");
+            totalTreasure -= allowance;
+            hasWithdrawn[msg.sender]=true;
+        }
 
-        totalTreasure -= amount;
-        hasWithdrawn[msg.sender] = true; 
+    } 
+    function resetWithdrawal(address _addr ) public onlyOwner{
+          hasWithdrawn[_addr]=false;
     }
-
-    function resetUser(address _user) public onlyOwner {
-        hasWithdrawn[_user] = false;
-    }
-
-    function transferOwnership(address _newOwner) public onlyOwner {
-        require(_newOwner != address(0), "Invalid address");
-        owner = _newOwner;
+    function transferOwnership(address _addr) public onlyOwner{
+        owner = _addr;
     }
 }
+
+
+
+
+
+
+
+
+
+

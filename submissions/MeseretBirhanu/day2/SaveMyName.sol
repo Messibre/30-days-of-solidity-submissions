@@ -11,7 +11,7 @@ contract SaveMyName {
     function set_profile(string calldata _yourname , string calldata _youremail , string calldata _yourhomeaddress ,bool _areyoustudent , string calldata _yourbio) public{
         name = _yourname;
         email = _youremail;
-        home_address = _yourhomeaddress;
+        home_address = _yourhomeaddress;   
         is_student = _areyoustudent;
         bio = _yourbio;
 

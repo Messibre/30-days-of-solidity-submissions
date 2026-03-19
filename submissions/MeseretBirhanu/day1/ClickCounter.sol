@@ -2,7 +2,12 @@
 pragma solidity ^0.8.19;
 
 contract ClickCounter{
+    address public owner;
     uint256 public num;
+
+    constructor() {
+        owner = msg.sender;
+    }
 
     function setnumber(uint256 number) public {
           num = number;
@@ -19,6 +24,10 @@ contract ClickCounter{
     }
     function square() public {
         num = num * num;
+    }
+    function reset() public{
+       require(msg.sender==owner , "only owner can reset");
+       num =0;
     }
 
 }

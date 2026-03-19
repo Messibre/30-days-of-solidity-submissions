@@ -7,6 +7,11 @@
 		"abi": [
 			{
 				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
 				"name": "clickdecrease",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -37,6 +42,26 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reset",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -88,11 +113,11 @@
 	},
 	"sources": {
 		"submissions/MeseretBirhanu/day1/ClickCounter.sol": {
-			"keccak256": "0x8bd7735e3ff0e43ab70fe1295fe4d086b4d7b539eb99830eb1007fd348d8c6d4",
+			"keccak256": "0x44786bab643824b355399b8c642b8071645ed94f12b33af149fc411a06ecc198",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6f0a5fae1b2ccd902d9e46ccf8359d0b0febb99bf8a03f422089381fe06901c1",
-				"dweb:/ipfs/QmWtfwJkww12bVoVVLbBUofBPsUgXxi2XuM7PFRDJoDYPV"
+				"bzz-raw://2eccf04d9b5a98013e07b3155cde0736a97727b1f95d4a52c515a4403fefe30e",
+				"dweb:/ipfs/QmcC29Q3NVcRkL5GrVxwHmHEDwzDTwaJ1ZP7iD5pzLBu2i"
 			]
 		}
 	},

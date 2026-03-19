@@ -1,119 +1,10 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.31+commit.fd3a2265"
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "bankManager",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "depositAmountEther",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_member",
-						"type": "address"
-					}
-				],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getMembers",
-				"outputs": [
-					{
-						"internalType": "address[]",
-						"name": "",
-						"type": "address[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "registeredMembers",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdrawAmount",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -127,9 +18,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"submissions/Zora/Day6EtherPiggyBank.sol": "EtherPiggyBank"
+			"submissions/MeseretBirhanu/day6/EtherPiggyBank.sol": "EtherPiggyBank"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -141,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"submissions/Zora/Day6EtherPiggyBank.sol": {
-			"keccak256": "0xf75a6a4c6cec9335eb40420d496302e5c6e8e0ba2e345424f1c091cd19212a77",
+		"submissions/MeseretBirhanu/day6/EtherPiggyBank.sol": {
+			"keccak256": "0x4c24441ea286346d4e56580dc1fcc900a07567e2f7566ff8e9c88415f822ffbc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://473a633e130966fa2e1bc3132bab66640967537777803dab5124373280d196cc",
-				"dweb:/ipfs/QmSQQSwaogy2UEDLBtW5j1aNBEHW3ZiBtA2Hve2GtD6E49"
+				"bzz-raw://0b6ddad0a9f99df7b37eb7dd92fce9fed238451aecad5d49bc12bb8e76049490",
+				"dweb:/ipfs/QmPtqNbJsKmG935A8JPEJoVAMtDCSZZN6NrG9Rwn91a5qN"
 			]
 		}
 	},

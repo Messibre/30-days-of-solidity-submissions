@@ -24,12 +24,11 @@ contract AuctionHouse{
         // gas not efficient tho 
         require(block.timestamp > endtime,"auction still going");
         for(uint i ; i<=len - 1;i++){
-                if(bidsamount[i]>=winnerbid){
+                if(bidsamount[i]>= winnerbid){
                     winnerbid = bidsamount[i];
                     return bids[winnerbid];
                 }
             }
         
-         
       }
     }
