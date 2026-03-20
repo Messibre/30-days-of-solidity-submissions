@@ -2,7 +2,6 @@
 pragma solidity ^0.8.19;
 
 contract TipJar{
-
     address public owner;
     uint256 public totalEarned;
     address public higherTipper;
