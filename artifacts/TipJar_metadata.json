@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.31+commit.fd3a2265"
 	},
 	"language": "Solidity",
 	"output": {
@@ -11,144 +11,13 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_currencyCode",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_rateToEth",
-						"type": "uint256"
-					}
-				],
-				"name": "addCurrency",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"name": "conversionRates",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_currencyCode",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "convertToEth",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "getContractBalance",
+				"name": "higherTipper",
 				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_currencyCode",
-						"type": "string"
-					}
-				],
-				"name": "getConversionRate",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getSupportedCurrencies",
-				"outputs": [
-					{
-						"internalType": "string[]",
-						"name": "",
-						"type": "string[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_tipper",
+						"name": "",
 						"type": "address"
-					}
-				],
-				"name": "getTipperContribution",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_currencyCode",
-						"type": "string"
-					}
-				],
-				"name": "getTipsInCurrency",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -168,45 +37,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "supportedCurrencies",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_currencyCode",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "tipInCurrency",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "tipInEth",
+				"name": "tip",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
@@ -219,26 +51,7 @@
 						"type": "address"
 					}
 				],
-				"name": "tipPerPerson",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"name": "tipsPerCurrency",
+				"name": "tippers",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -251,7 +64,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "totalTipsReceived",
+				"name": "totalEarned",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -263,21 +76,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "withdrawTips",
+				"name": "withdrawTip",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -296,9 +96,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"submissions/Zora/Day8TipJar.sol": "TipJar"
+			"submissions/MeseretBirhanu/day8/TipJar.sol": "TipJar"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -310,12 +110,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"submissions/Zora/Day8TipJar.sol": {
-			"keccak256": "0x090faefdf0af414a9d5f7cc83e7e77608354a1867bbf4811684117bfc6e40533",
+		"submissions/MeseretBirhanu/day8/TipJar.sol": {
+			"keccak256": "0x6cfd0e99ed72550baf64195b2e5f4dea252803ac070c6c894e7d9bc8d03fa9ff",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5600bd87de45b9d6c6597d51ee40d65c754dfb087f5f36cc90f41c0501916ac5",
-				"dweb:/ipfs/QmZoJrHu6DReqTr2iHAmbepyExTYHXyxuteGhCaakC74Qo"
+				"bzz-raw://cc134bccaf198b84163aede20602d3dce2e3e970f6d0ffcadc7582be58a24dae",
+				"dweb:/ipfs/QmWsbi4Ar18PEzPo8dKGD7KTRurhV8LwYUmVzfwmSkaAhE"
 			]
 		}
 	},
