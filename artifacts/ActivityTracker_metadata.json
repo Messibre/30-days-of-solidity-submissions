@@ -1,0 +1,117 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "enum ActivityTracker.Actions",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActivityTracker.Status",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"name": "currently",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "InactivateNutrition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "enum ActivityTracker.Actions",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"name": "activities",
+				"outputs": [
+					{
+						"internalType": "enum ActivityTracker.Status",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finishSleep",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pauseMeditation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startWorkout",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"submissions/MeseretBirhanu/day10/ActivityTracker.sol": "ActivityTracker"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"submissions/MeseretBirhanu/day10/ActivityTracker.sol": {
+			"keccak256": "0xa37c00a65d7bfb280d6ed60a769fec02160be2e7ee3d6d9cb29b717a9e3e23d4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2a922b9c31daf38c83b098bed60f99e7d23cd4265e2f2567112df680a399d735",
+				"dweb:/ipfs/QmW8w3WLqTMJFxY2vVFUmPdqRNS7BZWPusWiA3mpq6RQDP"
+			]
+		}
+	},
+	"version": 1
+}
