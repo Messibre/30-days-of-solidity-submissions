@@ -115,11 +115,11 @@
 	},
 	"sources": {
 		"submissions/MeseretBirhanu/day12/AthenaToken.sol": {
-			"keccak256": "0x482b943485e60f393dae122f1bd7e08abf45cddc60e736b8a1a36ec149894d4b",
+			"keccak256": "0x3de61caae752f6c58d2fd2b8a5a63930998a6f70e31fb6b9443c64f243884da3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b00534b354cf68e4cd98fd7cb0021e6fe15d398e891b05fc833f3d6cc9b97f27",
-				"dweb:/ipfs/QmRWGAn9a4cpNiX8txd5HB4VJrmKrd16SFW82iAqtqNnUC"
+				"bzz-raw://406addcc2225cd71548ccad68317d33851cffffd8d4e36ccfd2bf0aa8ae2b7f9",
+				"dweb:/ipfs/QmSuDq9DGmKgmavu7WExr29sXXSNATmoFgq4pfLYDatTvg"
 			]
 		}
 	},

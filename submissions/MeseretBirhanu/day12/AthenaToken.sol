@@ -12,7 +12,7 @@ interface IERC20 {
 contract AthenaToken is IERC20{
     string public name = "Athena Token";
     string public symbol = "ATH";
-    uint256 public decimals = 18;
+    uint8 public decimals = 18;
     uint256 public maxSupply = 10000000 * 10**18;
     address public owner;
 
@@ -25,8 +25,9 @@ contract AthenaToken is IERC20{
         uint256 initialSupply = _initialSupply *10**decimals;
         require(initialSupply > 0 , "invalid Amount");
         require( initialSupply <= maxSupply , "amount more than max supply");
-        totalSupply += initialSupply ;
-        balanceOf[msg.sender] += totalSupply;
+
+        totalSupply = initialSupply;
+        balanceOf[msg.sender] += initialSupply;
 
         emit Transfer(address(0), msg.sender, totalSupply);
     }
@@ -34,8 +35,8 @@ contract AthenaToken is IERC20{
         uint256 amount = _amount * 10**decimals; 
 
         require(msg.sender == owner , "not eligible to mint");
-        require(_amount > 0 , "invalid amount");
-        require(totalSupply + _amount <= maxSupply , "total amount more than max supply");
+        require(amount > 0 , "invalid amount");
+        require(totalSupply + amount <= maxSupply , "total amount more than max supply");
 
         totalSupply += amount;
         balanceOf[msg.sender] += amount;
