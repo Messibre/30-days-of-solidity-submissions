@@ -6,39 +6,77 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addrsContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
+						"indexed": false,
 						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "to",
+						"name": "buyer",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "value",
+						"name": "amountOfETH",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountOfTokens",
 						"type": "uint256"
 					}
 				],
-				"name": "Transfer",
+				"name": "BuyTokens",
 				"type": "event"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "buy",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
 					{
 						"internalType": "address",
-						"name": "account",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "balanceOf",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenContract",
+				"outputs": [
+					{
+						"internalType": "contract AthenaToken",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenPerEth",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -51,39 +89,9 @@
 			},
 			{
 				"inputs": [],
-				"name": "totalSupply",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "recipient",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "transfer",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -100,7 +108,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"submissions/MeseretBirhanu/day12/AthenaToken.sol": "IERC20"
+			"submissions/MeseretBirhanu/day13/PreorderTokens.sol": "PreorderTokens"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -120,6 +128,14 @@
 			"urls": [
 				"bzz-raw://473bf42108f1a74659342c2aef808817f89c5fd707f82b25e174d9d5df8c2d3e",
 				"dweb:/ipfs/QmSPeRR9PpvJcUgJdK5xE8tfqPC3NEACx65RNmGFT1E4N6"
+			]
+		},
+		"submissions/MeseretBirhanu/day13/PreorderTokens.sol": {
+			"keccak256": "0x722507ea241978a72a0bb546c66a7ead0fd31e2b2e2b0be7069387df779cbfe1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0278e4a4f1e3d29025c99c137cc58710222e271d0a331fbf156b994457333817",
+				"dweb:/ipfs/QmV8hgKBu4Qo9Fpa6HGT1JceQmpTbP2SbCAcnowaXvj7RL"
 			]
 		}
 	},
