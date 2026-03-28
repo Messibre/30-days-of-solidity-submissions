@@ -1,0 +1,214 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "NotContributor",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "addContributor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "sentReward",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "records",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isVerified",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint8",
+						"name": "level",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_wallet",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "_names",
+						"type": "string[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "_verified",
+						"type": "bool[]"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "_level",
+						"type": "uint8[]"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "reward",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenContract",
+				"outputs": [
+					{
+						"internalType": "contract AthenaToken",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"submissions/MeseretBirhanu/day15/GasSaver.sol": "GasSaver"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"submissions/MeseretBirhanu/day12/AthenaToken.sol": {
+			"keccak256": "0x36311a073e6b5f8cef7b4e3c398b2b20109c8adef9509f0d9f9677c17000dd62",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://473bf42108f1a74659342c2aef808817f89c5fd707f82b25e174d9d5df8c2d3e",
+				"dweb:/ipfs/QmSPeRR9PpvJcUgJdK5xE8tfqPC3NEACx65RNmGFT1E4N6"
+			]
+		},
+		"submissions/MeseretBirhanu/day15/GasSaver.sol": {
+			"keccak256": "0x71ac13f32f3dd685da16a04c6a434a36e036da2c85801e682916fc7364036f8f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8663d1992a6afcf54f91bf14773c9f6c60cdb3ba9ed8a5178278336828031048",
+				"dweb:/ipfs/QmWqj6QxetnDVQtiFcsGojpDTZ3npMCFV4JdyXu8GsuWVb"
+			]
+		}
+	},
+	"version": 1
+}

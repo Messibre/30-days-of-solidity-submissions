@@ -3,6 +3,7 @@ pragma solidity ^0.8.19;
 
 import "../day12/AthenaToken.sol";
 
+
 contract PreorderTokens{
      AthenaToken public tokenContract;
      uint256 public  tokenPerEth = 100;
@@ -35,3 +36,5 @@ emit BuyTokens(msg.sender, msg.value, amountToBuy);
     }
     
 }
+
+// token address for anyone who want to try it 0x891398D7EB2F5ec811dAaAC17EaEaCb5e711F5Cc
