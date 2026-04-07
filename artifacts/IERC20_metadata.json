@@ -1,35 +1,10 @@
 {
 	"compiler": {
-		"version": "0.8.31+commit.fd3a2265"
+		"version": "0.8.34+commit.80d5c536"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Transfer",
-				"type": "event"
-			},
 			{
 				"inputs": [
 					{
@@ -39,19 +14,6 @@
 					}
 				],
 				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalSupply",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -100,7 +62,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"submissions/MeseretBirhanu/day12/AthenaToken.sol": "IERC20"
+			"submissions/MeseretBirhanu/day15/GasSaver.sol": "IERC20"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -114,12 +76,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"submissions/MeseretBirhanu/day12/AthenaToken.sol": {
-			"keccak256": "0x36311a073e6b5f8cef7b4e3c398b2b20109c8adef9509f0d9f9677c17000dd62",
+		"submissions/MeseretBirhanu/day15/GasSaver.sol": {
+			"keccak256": "0xfa111ba588315e755603fd8318e559462d411ba373b810efd89a129fcd9ce89b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://473bf42108f1a74659342c2aef808817f89c5fd707f82b25e174d9d5df8c2d3e",
-				"dweb:/ipfs/QmSPeRR9PpvJcUgJdK5xE8tfqPC3NEACx65RNmGFT1E4N6"
+				"bzz-raw://98c9055b029b40807b99ed1598000a6c24085185160ce0270b4bed97ece8ea5f",
+				"dweb:/ipfs/QmNVNu4ieWQRCtDrp4mKr3XHR3JtvpEC4Ppu8sRJQtxYir"
 			]
 		}
 	},

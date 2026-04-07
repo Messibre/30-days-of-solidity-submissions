@@ -38,36 +38,10 @@
 		"gasEstimates": null,
 		"methodIdentifiers": {
 			"balanceOf(address)": "70a08231",
-			"totalSupply()": "18160ddd",
 			"transfer(address,uint256)": "a9059cbb"
 		}
 	},
 	"abi": [
-		{
-			"anonymous": false,
-			"inputs": [
-				{
-					"indexed": true,
-					"internalType": "address",
-					"name": "from",
-					"type": "address"
-				},
-				{
-					"indexed": true,
-					"internalType": "address",
-					"name": "to",
-					"type": "address"
-				},
-				{
-					"indexed": false,
-					"internalType": "uint256",
-					"name": "value",
-					"type": "uint256"
-				}
-			],
-			"name": "Transfer",
-			"type": "event"
-		},
 		{
 			"inputs": [
 				{
@@ -77,19 +51,6 @@
 				}
 			],
 			"name": "balanceOf",
-			"outputs": [
-				{
-					"internalType": "uint256",
-					"name": "",
-					"type": "uint256"
-				}
-			],
-			"stateMutability": "view",
-			"type": "function"
-		},
-		{
-			"inputs": [],
-			"name": "totalSupply",
 			"outputs": [
 				{
 					"internalType": "uint256",

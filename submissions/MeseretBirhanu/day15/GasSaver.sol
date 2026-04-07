@@ -1,13 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "../day12/AthenaToken.sol";
-
+interface IERC20 {
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
+}
 contract GasSaver{
 
     error NotContributor();
 
-    AthenaToken public tokenContract;
+    IERC20 public tokenContract;
     address public owner;
 
     struct Contributor{
@@ -23,7 +25,7 @@ contract GasSaver{
 
      constructor(address _addr){
       owner = msg.sender;
-     tokenContract = AthenaToken(_addr);
+     tokenContract = IERC20(_addr);
 
     }
 
@@ -42,9 +44,9 @@ contract GasSaver{
 
         }
     }
-    function reward(address _addr  ,uint256 _amount) public onlyOwner payable {
+    function reward(address _addr  ,uint256 _amount) public onlyOwner {
 
-        if(records[_addr].wallet!= address(0)  ){
+        if(records[_addr].wallet == address(0)  ){
             revert NotContributor();
         }
         Contributor memory _to = records[_addr];
@@ -53,7 +55,10 @@ contract GasSaver{
 
      bool success = tokenContract.transfer(_addr, _amount);
     require(success, "ATH transfer failed!");
-     emit sentReward(_to.name ,msg.value );
+     emit sentReward(_to.name ,_amount );
 
     }
+    function getContractBalance() public view returns (uint256) {
+    return tokenContract.balanceOf(address(this));
+}
 }

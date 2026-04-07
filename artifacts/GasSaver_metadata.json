@@ -61,6 +61,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -149,7 +162,7 @@
 				],
 				"name": "reward",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -157,7 +170,7 @@
 				"name": "tokenContract",
 				"outputs": [
 					{
-						"internalType": "contract AthenaToken",
+						"internalType": "contract IERC20",
 						"name": "",
 						"type": "address"
 					}
@@ -193,20 +206,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"submissions/MeseretBirhanu/day12/AthenaToken.sol": {
-			"keccak256": "0x36311a073e6b5f8cef7b4e3c398b2b20109c8adef9509f0d9f9677c17000dd62",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://473bf42108f1a74659342c2aef808817f89c5fd707f82b25e174d9d5df8c2d3e",
-				"dweb:/ipfs/QmSPeRR9PpvJcUgJdK5xE8tfqPC3NEACx65RNmGFT1E4N6"
-			]
-		},
 		"submissions/MeseretBirhanu/day15/GasSaver.sol": {
-			"keccak256": "0x71ac13f32f3dd685da16a04c6a434a36e036da2c85801e682916fc7364036f8f",
+			"keccak256": "0xfa111ba588315e755603fd8318e559462d411ba373b810efd89a129fcd9ce89b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8663d1992a6afcf54f91bf14773c9f6c60cdb3ba9ed8a5178278336828031048",
-				"dweb:/ipfs/QmWqj6QxetnDVQtiFcsGojpDTZ3npMCFV4JdyXu8GsuWVb"
+				"bzz-raw://98c9055b029b40807b99ed1598000a6c24085185160ce0270b4bed97ece8ea5f",
+				"dweb:/ipfs/QmNVNu4ieWQRCtDrp4mKr3XHR3JtvpEC4Ppu8sRJQtxYir"
 			]
 		}
 	},
